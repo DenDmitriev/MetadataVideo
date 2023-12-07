@@ -10,7 +10,14 @@
 import Foundation
 
 public struct MetadataVideo: Codable {
+    /// Media streams array.
+    ///
+    /// Contains video, audio, subtitle and data streams types.
     public let streams: [StreamMetadata]
+    
+    /// Format file.
+    ///
+    /// Contains file properties such as name, numeric streams, duration, size, bit rate.
     public let format: FormatMetadata
 }
 
@@ -88,6 +95,8 @@ extension MetadataVideo {
 }
 
 extension MetadataVideo {
+    
+    /// JSON MetadataVideo placeholder file for debug.
     public static let placeholder: Self? = {
         let url = Bundle.main.url(forResource: "metadata", withExtension: "json")
         guard let url else { return nil }

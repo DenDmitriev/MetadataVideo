@@ -7,6 +7,9 @@ let package = Package(
     name: "MetadataVideo",
     platforms: [
         .macOS(.v13),
+        .iOS(.v12),
+        .watchOS(.v4),
+        .tvOS(.v12)
     ],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.

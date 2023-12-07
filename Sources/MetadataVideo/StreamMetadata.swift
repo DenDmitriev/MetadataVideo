@@ -37,6 +37,17 @@ public struct StreamMetadata: Codable, Identifiable, DictionaryKeyValueable {
     public let timeBase: String? // "time_base": "1/1000"
     public let tags: Tags?
     
+    /// Dictionary of all stream keys with values
+    ///
+    /// The library is created using all the keys of the `CodingKeys` enumeration.
+    /// Example:
+    ///
+    ///     let metadata = try JSONDecoder().decode(MetadataVideo.self, from: data)
+    ///     let dictionary = metadata.streams.first?.dictionary
+    ///     // [Bit rate: Optional("953 685 B"), Duration: Optional("0:56:22"), Start time: Optional("0:00:00"), File name: Optional("/Users/me/Movies/Video.mkv")]
+    ///
+    /// > Warning: The values is optional.
+    ///
     public var dictionary: [CodingKeys: String?] {
         var dictionary = [CodingKeys: String?]()
         for key in CodingKeys.allCases {
@@ -47,6 +58,18 @@ public struct StreamMetadata: Codable, Identifiable, DictionaryKeyValueable {
         return dictionary
     }
     
+    /// Value by key
+    ///
+    /// Example:
+    ///
+    ///     let metadata = try JSONDecoder().decode(MetadataVideo.self, from: data)
+    ///     let fileName = metadata.streams.first?.value(for: .fileName) // "Video.mov"
+    ///
+    /// > Warning: The return value is not localized.
+    ///
+    /// - Parameter key: `String, CodingKey, CaseIterable, Keyable`.
+    ///
+    /// - Returns: String Type value by  key.
     public func value(for key: CodingKeys) -> String? {
         switch key {
         case .index:
@@ -243,6 +266,17 @@ extension StreamMetadata {
         public let encoder: String? // "H.264"
         public let timecode: String? // "01:00:00:00"
         
+        /// Dictionary of all stream tags keys with values
+        ///
+        /// The library is created using all the keys of the `CodingKeys` enumeration.
+        /// Example:
+        ///
+        ///     let metadata = try JSONDecoder().decode(MetadataVideo.self, from: data)
+        ///     let dictionary = metadata.streams.first?.tags
+        ///     // [Bit rate: Optional("953 685 B"), Duration: Optional("0:56:22"), Start time: Optional("0:00:00"), File name: Optional("/Users/me/Movies/Video.mkv")]
+        ///
+        /// > Warning: The values is optional.
+        ///
         public var dictionary: [CodingKeys: String?] {
             var dictionary = [CodingKeys: String?]()
             for key in CodingKeys.allCases {
@@ -253,6 +287,18 @@ extension StreamMetadata {
             return dictionary
         }
         
+        /// Value by key
+        ///
+        /// Example:
+        ///
+        ///     let metadata = try JSONDecoder().decode(MetadataVideo.self, from: data)
+        ///     let fileName = metadata.streams.first?.tags?.value(for: .fileName) // "Video.mov"
+        ///
+        /// > Warning: The return value is not localized.
+        ///
+        /// - Parameter key: `String, CodingKey, CaseIterable, Keyable`.
+        ///
+        /// - Returns: String Type value by  key.
         public func value(for key: CodingKeys) -> String? {
             switch key {
             case .title:

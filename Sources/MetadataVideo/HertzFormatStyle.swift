@@ -11,7 +11,6 @@ public struct HertzFormatStyle: FormatStyle {
     public func format(_ value: Int) -> String {
         let symbol: String = {
             let identifier = Locale.current.identifier
-            print(identifier)
             switch identifier {
             case "ru_RU":
                 return "Гц"
