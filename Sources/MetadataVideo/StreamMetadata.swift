@@ -8,7 +8,7 @@
 import Foundation
 
 public struct StreamMetadata: Codable, Identifiable, DictionaryKeyValueable {
-    typealias Key = CodingKeys
+    public typealias Key = CodingKeys
     
     public let id: UUID = UUID()
     public let index: Int? // 0

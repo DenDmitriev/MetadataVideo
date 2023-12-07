@@ -7,11 +7,11 @@
 
 import Foundation
 
-protocol Keyable: Identifiable, CustomStringConvertible, Hashable {
+public protocol Keyable: Identifiable, CustomStringConvertible, Hashable {
     var index: Int { get }
 }
 
-protocol DictionaryKeyValueable {
+public protocol DictionaryKeyValueable {
     associatedtype Key: CodingKey, CaseIterable, Keyable
     var dictionary: [Key: String?] { get }
     func value(for key: Key) -> String?
