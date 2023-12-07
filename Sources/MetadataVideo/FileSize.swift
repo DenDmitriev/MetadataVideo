@@ -7,26 +7,26 @@
 
 import Foundation
 
-struct FileSize {
-    var size: Double
-    let unit: Unit
+public struct FileSize {
+    public var size: Double
+    public let unit: Unit
     
-    init(size: Double, unit: Unit) {
+    public init(size: Double, unit: Unit) {
         self.size = size
         self.unit = unit
     }
     
-    init(size: Int, unit: Unit) {
+    public init(size: Int, unit: Unit) {
         let sizeDouble = Double(size)
         self.size = sizeDouble
         self.unit = unit
     }
     
-    func size(in unit: Unit) -> Double {
+    public func size(in unit: Unit) -> Double {
         return size * Double(self.unit.factor) / Double(unit.factor)
     }
     
-    func optimal(rule: FloatingPointRoundingRule? = nil) -> Self {
+    public func optimal(rule: FloatingPointRoundingRule? = nil) -> Self {
         let sizeInKiloBytes = size * self.unit.factor / 1000
         let optimal: Self
         switch sizeInKiloBytes {
@@ -70,14 +70,14 @@ struct FileSize {
 }
 
 extension FileSize {
-    enum Unit {
+    public enum Unit {
         case bit
         case byte
         case kiloByte
         case megaByte
         case gigaByte
         
-        var factor: Double {
+        public var factor: Double {
             switch self {
             case .bit:
                 return 1/8
@@ -92,7 +92,7 @@ extension FileSize {
             }
         }
         
-        var designation: String {
+        public var designation: String {
             switch self {
             case .bit:
                 return "bit"
@@ -110,11 +110,11 @@ extension FileSize {
 }
 
 extension FileSize: CustomStringConvertible {
-    var description: String {
+    public var description: String {
         return Int(size.rounded()).formatted() + " " + self.unit.designation
     }
     
-    func formatted() -> String {
+    public func formatted() -> String {
         return description
     }
 }

@@ -88,7 +88,7 @@ extension MetadataVideo {
 }
 
 extension MetadataVideo {
-    static let placeholder: Self? = {
+    public static let placeholder: Self? = {
         let url = Bundle.main.url(forResource: "metadata", withExtension: "json")
         guard let url else { return nil }
         do {

@@ -25,5 +25,5 @@ public struct HertzFormatStyle: FormatStyle {
 }
 
 extension FormatStyle where Self == HertzFormatStyle {
-  static var hertz: HertzFormatStyle { .init() }
+  static public var hertz: HertzFormatStyle { .init() }
 }

@@ -9,17 +9,17 @@ import Foundation
 
 public struct FormatMetadata: Codable, Identifiable, DictionaryKeyValueable {
     public let id: UUID = UUID()
-    let fileName: String?
-    let numberStreams: Int?
-    let formatName: String?
-    let startTime: Duration?
-    let duration: Duration?
-    let size: Int?
-    let bitRate: Int?
-    let probeScore: Int?
-    let tags: Tags?
+    public let fileName: String?
+    public let numberStreams: Int?
+    public let formatName: String?
+    public let startTime: Duration?
+    public let duration: Duration?
+    public let size: Int?
+    public let bitRate: Int?
+    public let probeScore: Int?
+    public let tags: Tags?
     
-    var dictionary: [CodingKeys: String?] {
+    public var dictionary: [CodingKeys: String?] {
         var dictionary = [CodingKeys: String?]()
         for key in CodingKeys.allCases {
             if let value = value(for: key) {
@@ -42,7 +42,7 @@ public struct FormatMetadata: Codable, Identifiable, DictionaryKeyValueable {
         self.tags = try container.decodeIfPresent(FormatMetadata.Tags.self, forKey: FormatMetadata.CodingKeys.tags)
     }
     
-    func value(for key: CodingKeys) -> String? {
+    public func value(for key: CodingKeys) -> String? {
         switch key {
         case .fileName:
             return fileName
@@ -65,7 +65,7 @@ public struct FormatMetadata: Codable, Identifiable, DictionaryKeyValueable {
         }
     }
     
-    enum CodingKeys: String, CodingKey, CaseIterable, Keyable {
+    public enum CodingKeys: String, CodingKey, CaseIterable, Keyable {
         case fileName = "filename"
         case numberStreams = "nb_streams"
         case formatName = "format_name"
@@ -76,15 +76,15 @@ public struct FormatMetadata: Codable, Identifiable, DictionaryKeyValueable {
         case probeScore = "probe_score"
         case tags
         
-        var id: String {
+        public var id: String {
             self.rawValue
         }
         
-        var index: Int {
+        public var index: Int {
             Self.allCases.firstIndex(of: self) ?? .zero
         }
         
-        var description: String {
+        public var description: String {
             switch self {
             case .fileName:
                 return "File name"
@@ -110,13 +110,13 @@ public struct FormatMetadata: Codable, Identifiable, DictionaryKeyValueable {
 }
 
 extension FormatMetadata {
-    struct Tags: Codable, Identifiable, DictionaryKeyValueable {
-        let id: UUID = UUID()
-        let title: String?
-        let encoder: String?
-        let creationTime: Date?
+    public struct Tags: Codable, Identifiable, DictionaryKeyValueable {
+        public let id: UUID = UUID()
+        public let title: String?
+        public let encoder: String?
+        public let creationTime: Date?
         
-        static let dateFormatter: DateFormatter = {
+        static private let dateFormatter: DateFormatter = {
             let dateFormatter = DateFormatter()
             dateFormatter.timeZone = TimeZone.current
             dateFormatter.locale = Locale.current
@@ -125,7 +125,7 @@ extension FormatMetadata {
             return dateFormatter
         }()
         
-        var dictionary: [CodingKeys: String?] {
+        public var dictionary: [CodingKeys: String?] {
             var dictionary = [CodingKeys: String?]()
             for key in CodingKeys.allCases {
                 if let value = value(for: key) {
@@ -135,7 +135,7 @@ extension FormatMetadata {
             return dictionary
         }
         
-        func value(for key: CodingKeys) -> String? {
+        public func value(for key: CodingKeys) -> String? {
             switch key {
             case .title:
                 return title
@@ -150,20 +150,20 @@ extension FormatMetadata {
             }
         }
         
-        enum CodingKeys: String, CodingKey, CaseIterable, Keyable {
+        public enum CodingKeys: String, CodingKey, CaseIterable, Keyable {
             case title
             case encoder = "encoder"
             case creationTime = "creation_time"
             
-            var id: String {
+            public var id: String {
                 self.rawValue
             }
             
-            var index: Int {
+            public var index: Int {
                 Self.allCases.firstIndex(of: self) ?? .zero
             }
             
-            var description: String {
+            public var description: String {
                 switch self {
                 case .title:
                     return "Title"
@@ -175,7 +175,7 @@ extension FormatMetadata {
             }
         }
         
-        init(from decoder: Decoder) throws {
+        public init(from decoder: Decoder) throws {
             let container: KeyedDecodingContainer<FormatMetadata.Tags.CodingKeys> = try decoder.container(keyedBy: FormatMetadata.Tags.CodingKeys.self)
             self.title = try container.decodeIfPresent(String.self, forKey: FormatMetadata.Tags.CodingKeys.title)
             self.encoder = try container.decodeIfPresent(String.self, forKey: FormatMetadata.Tags.CodingKeys.encoder)
