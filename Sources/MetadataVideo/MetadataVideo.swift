@@ -9,17 +9,17 @@
 
 import Foundation
 
-struct MetadataVideo: Codable {
+public struct MetadataVideo: Codable {
     let streams: [StreamMetadata]
     let format: FormatMetadata
 }
 
 extension MetadataVideo: Hashable, Equatable {
-    func hash(into hasher: inout Hasher) {
+    public func hash(into hasher: inout Hasher) {
         hasher.combine(format.fileName)
     }
     
-    static func == (lhs: MetadataVideo, rhs: MetadataVideo) -> Bool {
+    public static func == (lhs: MetadataVideo, rhs: MetadataVideo) -> Bool {
         lhs.format.fileName == rhs.format.fileName
     }
 }
