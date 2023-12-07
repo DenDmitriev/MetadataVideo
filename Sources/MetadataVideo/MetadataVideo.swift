@@ -10,8 +10,8 @@
 import Foundation
 
 public struct MetadataVideo: Codable {
-    let streams: [StreamMetadata]
-    let format: FormatMetadata
+    public let streams: [StreamMetadata]
+    public let format: FormatMetadata
 }
 
 extension MetadataVideo: Hashable, Equatable {
