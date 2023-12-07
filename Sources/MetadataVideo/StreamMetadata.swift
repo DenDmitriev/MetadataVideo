@@ -11,33 +11,33 @@ public struct StreamMetadata: Codable, Identifiable, DictionaryKeyValueable {
     typealias Key = CodingKeys
     
     public let id: UUID = UUID()
-    let index: Int? // 0
-    let codecName: String? // h264
-    let codecLongName: String? // unknown
-    let profile: String? // 100
-    let codecType: CodecType? // video
-    let codecTagString: String? // video
-    let width: Int? // 1920
-    let height: Int? // 1080
-    let colorRange: String? // tv
-    let colorSpace: String? // bt709
-    let fieldOrder: String? // progressive
-    let displayAspectRatio: String? // 16:9
-    let pixelFormat: String? // yuv420p
-    let frameRate: Double? // 2997/125
-    let duration: Duration? // 5.000000
-    let startTime: Duration? // 0.0
-    let bitRate: Int? // 42934
-    let bitsPerRawSample: Int? // 8
-    let numberFrames: String? // 120
-    let sampleRate: Int? // "sample_rate": "48000",
-    let channels: Int? // "channels": 6,
-    let channelLayout: String? // "channel_layout": "5.1(side)",
-    let bitsPerSample: Int? // "bits_per_sample": 0,
-    let timeBase: String? // "time_base": "1/1000"
-    let tags: Tags?
+    public let index: Int? // 0
+    public let codecName: String? // h264
+    public let codecLongName: String? // unknown
+    public let profile: String? // 100
+    public let codecType: CodecType? // video
+    public let codecTagString: String? // video
+    public let width: Int? // 1920
+    public let height: Int? // 1080
+    public let colorRange: String? // tv
+    public let colorSpace: String? // bt709
+    public let fieldOrder: String? // progressive
+    public let displayAspectRatio: String? // 16:9
+    public let pixelFormat: String? // yuv420p
+    public let frameRate: Double? // 2997/125
+    public let duration: Duration? // 5.000000
+    public let startTime: Duration? // 0.0
+    public let bitRate: Int? // 42934
+    public let bitsPerRawSample: Int? // 8
+    public let numberFrames: String? // 120
+    public let sampleRate: Int? // "sample_rate": "48000",
+    public let channels: Int? // "channels": 6,
+    public let channelLayout: String? // "channel_layout": "5.1(side)",
+    public let bitsPerSample: Int? // "bits_per_sample": 0,
+    public let timeBase: String? // "time_base": "1/1000"
+    public let tags: Tags?
     
-    var dictionary: [CodingKeys: String?] {
+    public var dictionary: [CodingKeys: String?] {
         var dictionary = [CodingKeys: String?]()
         for key in CodingKeys.allCases {
             if let value = value(for: key) {
@@ -47,7 +47,7 @@ public struct StreamMetadata: Codable, Identifiable, DictionaryKeyValueable {
         return dictionary
     }
     
-    func value(for key: CodingKeys) -> String? {
+    public func value(for key: CodingKeys) -> String? {
         switch key {
         case .index:
             return self.index?.formatted()
@@ -102,7 +102,7 @@ public struct StreamMetadata: Codable, Identifiable, DictionaryKeyValueable {
         }
     }
     
-    enum CodingKeys: String, CodingKey, CaseIterable, Keyable {
+    public enum CodingKeys: String, CodingKey, CaseIterable, Keyable {
         case index = "index"
         case codecName = "codec_name"
         case codecLongName = "codec_long_name"
@@ -129,15 +129,15 @@ public struct StreamMetadata: Codable, Identifiable, DictionaryKeyValueable {
         case timeBase = "time_base"
         case tags
         
-        var id: String {
+        public var id: String {
             self.rawValue
         }
         
-        var index: Int {
+        public var index: Int {
             Self.allCases.firstIndex(of: self) ?? .zero
         }
         
-        var description: String {
+        public var description: String {
             switch self {
             case .index:
                 return "Index"
@@ -230,20 +230,20 @@ public struct StreamMetadata: Codable, Identifiable, DictionaryKeyValueable {
 }
 
 extension StreamMetadata {
-    struct Tags: Codable, Identifiable, DictionaryKeyValueable {
-        let id: UUID = UUID()
-        let language: String?
-        let title: String?
-        let duration: String? // 00:47:09.622000000
-        let numberOfFrames: Int? // 67843
-        let numberOfBytes: Int? // 2404223327
-        let creationTime: Date? // "2023-11-29T14:41:04.000000Z"
-        let handlerName: String? // "VideoHandler"
-        let vendorId: String? //
-        let encoder: String? // "H.264"
-        let timecode: String? // "01:00:00:00"
+    public struct Tags: Codable, Identifiable, DictionaryKeyValueable {
+        public let id: UUID = UUID()
+        public let language: String?
+        public let title: String?
+        public let duration: String? // 00:47:09.622000000
+        public let numberOfFrames: Int? // 67843
+        public let numberOfBytes: Int? // 2404223327
+        public let creationTime: Date? // "2023-11-29T14:41:04.000000Z"
+        public let handlerName: String? // "VideoHandler"
+        public let vendorId: String? //
+        public let encoder: String? // "H.264"
+        public let timecode: String? // "01:00:00:00"
         
-        var dictionary: [CodingKeys: String?] {
+        public var dictionary: [CodingKeys: String?] {
             var dictionary = [CodingKeys: String?]()
             for key in CodingKeys.allCases {
                 if let value = value(for: key) {
@@ -253,7 +253,7 @@ extension StreamMetadata {
             return dictionary
         }
         
-        func value(for key: CodingKeys) -> String? {
+        public func value(for key: CodingKeys) -> String? {
             switch key {
             case .title:
                 return title
@@ -288,7 +288,7 @@ extension StreamMetadata {
             }
         }
         
-        enum CodingKeys: String, CodingKey, CaseIterable, Keyable {
+        public enum CodingKeys: String, CodingKey, CaseIterable, Keyable {
             case language
             case title
             case duration = "DURATION"
@@ -300,15 +300,15 @@ extension StreamMetadata {
             case encoder = "encoder"
             case timecode = "timecode"
             
-            var id: String {
+            public var id: String {
                 self.rawValue
             }
             
-            var index: Int {
+            public var index: Int {
                 Self.allCases.firstIndex(of: self) ?? .zero
             }
             
-            var description: String {
+            public var description: String {
                 switch self {
                 case .title:
                     return "Title"
@@ -334,7 +334,7 @@ extension StreamMetadata {
             }
         }
         
-        init(from decoder: Decoder) throws {
+        public init(from decoder: Decoder) throws {
             let container: KeyedDecodingContainer<StreamMetadata.Tags.CodingKeys> = try decoder.container(keyedBy: StreamMetadata.Tags.CodingKeys.self)
             self.title = try container.decodeIfPresent(String.self, forKey: StreamMetadata.Tags.CodingKeys.title)
             self.language = try container.decodeIfPresent(String.self, forKey: StreamMetadata.Tags.CodingKeys.language)
