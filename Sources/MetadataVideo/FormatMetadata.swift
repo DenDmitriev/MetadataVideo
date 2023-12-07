@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct FormatMetadata: Codable, Identifiable, DictionaryKeyValueable {
-    let id: UUID = UUID()
+public struct FormatMetadata: Codable, Identifiable, DictionaryKeyValueable {
+    public let id: UUID = UUID()
     let fileName: String?
     let numberStreams: Int?
     let formatName: String?
@@ -29,13 +29,12 @@ struct FormatMetadata: Codable, Identifiable, DictionaryKeyValueable {
         return dictionary
     }
     
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let container: KeyedDecodingContainer<FormatMetadata.CodingKeys> = try decoder.container(keyedBy: FormatMetadata.CodingKeys.self)
         self.fileName = try container.decodeIfPresent(String.self, forKey: FormatMetadata.CodingKeys.fileName)
         self.numberStreams = try container.decodeIfPresent(Int.self, forKey: FormatMetadata.CodingKeys.numberStreams)
         self.formatName = try container.decodeIfPresent(String.self, forKey: FormatMetadata.CodingKeys.formatName)
         self.startTime = try MetadataVideo.decodeIfPresentDuration(container: container, key: .startTime)
-        let durationString = try container.decodeIfPresent(String.self, forKey: FormatMetadata.CodingKeys.duration)
         self.duration = try MetadataVideo.decodeIfPresentDuration(container: container, key: .duration)
         self.size = try MetadataVideo.decodeIfPresentInt(container: container, key: .size)
         self.bitRate = try MetadataVideo.decodeIfPresentInt(container: container, key: .bitRate)

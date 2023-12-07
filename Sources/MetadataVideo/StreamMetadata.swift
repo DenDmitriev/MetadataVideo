@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct StreamMetadata: Codable, Identifiable, DictionaryKeyValueable {
+public struct StreamMetadata: Codable, Identifiable, DictionaryKeyValueable {
     typealias Key = CodingKeys
     
-    let id: UUID = UUID()
+    public let id: UUID = UUID()
     let index: Int? // 0
     let codecName: String? // h264
     let codecLongName: String? // unknown
@@ -193,7 +193,7 @@ struct StreamMetadata: Codable, Identifiable, DictionaryKeyValueable {
         }
     }
     
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let container: KeyedDecodingContainer<StreamMetadata.CodingKeys> = try decoder.container(keyedBy: StreamMetadata.CodingKeys.self)
         self.index = try container.decodeIfPresent(Int.self, forKey: StreamMetadata.CodingKeys.index)
         self.codecName = try container.decodeIfPresent(String.self, forKey: StreamMetadata.CodingKeys.codecName)

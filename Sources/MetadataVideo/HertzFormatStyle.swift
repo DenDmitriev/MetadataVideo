@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct HertzFormatStyle: FormatStyle {
-    func format(_ value: Int) -> String {
+public struct HertzFormatStyle: FormatStyle {
+    public func format(_ value: Int) -> String {
         let symbol: String = {
             let identifier = Locale.current.identifier
             print(identifier)
