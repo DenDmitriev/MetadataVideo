@@ -107,7 +107,7 @@ public struct StreamMetadata: Codable, Identifiable, DictionaryKeyValueable {
         case .bitRate:
             return MetadataVideo.fileSizeFormatted(value: bitRate, unit: .byte, rule: .down)
         case .bitsPerRawSample:
-            return MetadataVideo.fileSizeFormatted(value: bitsPerRawSample, unit: .bit)
+            return MetadataVideo.fileSizeFormatted(value: bitsPerRawSample, unit: .bit, rule: .down)
         case .numberFrames:
             return self.numberFrames
         case .fieldOrder:

@@ -80,7 +80,7 @@ public struct FormatMetadata: Codable, Identifiable, DictionaryKeyValueable {
         case .duration:
             return duration?.formatted(.time(pattern: .hourMinuteSecond))
         case .size:
-            return MetadataVideo.fileSizeFormatted(value: size, unit: .byte, rule: .up)
+            return MetadataVideo.fileSizeFormatted(value: size, unit: .byte)
         case .bitRate:
             return MetadataVideo.fileSizeFormatted(value: bitRate, unit: .bit, rule: .down)
         case .probeScore:
