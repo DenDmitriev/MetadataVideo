@@ -109,3 +109,28 @@ extension MetadataVideo {
         }
     }()
 }
+
+extension MetadataVideo {
+    
+    /// Due to incorrect formatting of FFmpeg/FFprobe console output, line breaks and quote characters need to be converted.
+    ///
+    /// From:
+    /// ```txt
+    /// {\n    \"streams\": [...], \"format\": {..}}
+    /// ```
+    /// To:
+    /// ```json
+    /// {
+    ///     "streams": [...],
+    ///     "format": {...}
+    /// }
+    /// ```
+    ///
+    public static func convertMediaInformationToJSON(_ mediaInformation: String) -> Data? {
+        let converted = mediaInformation
+            .replacingOccurrences(of: "\\n", with: "\n")
+            .replacingOccurrences(of: "\\\u{22}", with: "\u{22}")
+        let data = converted.data(using: .utf8)
+        return data
+    }
+}
