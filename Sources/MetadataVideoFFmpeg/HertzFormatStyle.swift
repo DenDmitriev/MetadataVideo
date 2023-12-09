@@ -7,11 +7,10 @@
 
 import Foundation
 
-struct HertzFormatStyle: FormatStyle {
-    func format(_ value: Int) -> String {
+public struct HertzFormatStyle: FormatStyle {
+    public func format(_ value: Int) -> String {
         let symbol: String = {
             let identifier = Locale.current.identifier
-            print(identifier)
             switch identifier {
             case "ru_RU":
                 return "Гц"
@@ -25,5 +24,5 @@ struct HertzFormatStyle: FormatStyle {
 }
 
 extension FormatStyle where Self == HertzFormatStyle {
-  static var hertz: HertzFormatStyle { .init() }
+  static public var hertz: HertzFormatStyle { .init() }
 }

@@ -9,17 +9,24 @@
 
 import Foundation
 
-struct MetadataVideo: Codable {
-    let streams: [StreamMetadata]
-    let format: FormatMetadata
+public struct MetadataVideo: Codable {
+    /// Media streams array.
+    ///
+    /// Contains video, audio, subtitle and data streams types.
+    public let streams: [StreamMetadata]
+    
+    /// Format file.
+    ///
+    /// Contains file properties such as name, numeric streams, duration, size, bit rate.
+    public let format: FormatMetadata
 }
 
 extension MetadataVideo: Hashable, Equatable {
-    func hash(into hasher: inout Hasher) {
+    public func hash(into hasher: inout Hasher) {
         hasher.combine(format.fileName)
     }
     
-    static func == (lhs: MetadataVideo, rhs: MetadataVideo) -> Bool {
+    public static func == (lhs: MetadataVideo, rhs: MetadataVideo) -> Bool {
         lhs.format.fileName == rhs.format.fileName
     }
 }
@@ -88,7 +95,9 @@ extension MetadataVideo {
 }
 
 extension MetadataVideo {
-    static let placeholder: Self? = {
+    
+    /// JSON MetadataVideo placeholder file for debug.
+    public static let placeholder: Self? = {
         let url = Bundle.main.url(forResource: "metadata", withExtension: "json")
         guard let url else { return nil }
         do {
@@ -99,4 +108,29 @@ extension MetadataVideo {
             return nil
         }
     }()
+}
+
+extension MetadataVideo {
+    
+    /// Due to incorrect formatting of FFmpeg/FFprobe console output, line breaks and quote characters need to be converted.
+    ///
+    /// From:
+    /// ```txt
+    /// {\n    \"streams\": [...], \"format\": {..}}
+    /// ```
+    /// To:
+    /// ```json
+    /// {
+    ///     "streams": [...],
+    ///     "format": {...}
+    /// }
+    /// ```
+    ///
+    public static func convertMediaInformationToJSON(_ mediaInformation: String) -> Data? {
+        let converted = mediaInformation
+            .replacingOccurrences(of: "\\n", with: "\n")
+            .replacingOccurrences(of: "\\\u{22}", with: "\u{22}")
+        let data = converted.data(using: .utf8)
+        return data
+    }
 }
