@@ -2,7 +2,8 @@
 File video content metadata decoder from FFmpeg media information
 
 ## Usage
-
+Before use MetadataVideoFFmpeg you need install [ffmpeg-kit](https://github.com/arthenica/ffmpeg-kit) or manual get media information from command line FFmpeg. 
+Example with [ffmpeg-kit](https://github.com/arthenica/ffmpeg-kit) wrapper.
 ```swift
         let videoURL = URL(string: "/Users/Username/Movies/Video.mov")
         let path = videoURL.relativePath
@@ -10,11 +11,9 @@ File video content metadata decoder from FFmpeg media information
         let metadataRaw = mediaInformation?.getOutput()
         if let metadataRaw {
             do {
-                let formatted = metadataRaw
-                    .replacingOccurrences(of: "\\n", with: "\n")
-                    .replacingOccurrences(of: "\\\u{22}", with: "\u{22}")
-                guard let data = formatted.data(using: .utf8) else { return .failure(.parsingMetadataFailure) }
-                let metadataVideo = try JSONDecoder().decode(MetadataVideo.self, from: data)
+                let data = MetadataVideo.convertMediaInformationToJSON(metadataRaw)
+                guard let data else { return }
+                let metadataVideo = try JSONDecoder().decode(MetadataVideo.self, from: data) // metadata of Video.mov
             } catch {
                 print(error.localizedDescription)
             }
@@ -22,8 +21,6 @@ File video content metadata decoder from FFmpeg media information
 ```
 
 ## Install
-
-Before use MetadataVideoFFmpeg you need install [ffmpeg-kit](https://github.com/arthenica/ffmpeg-kit)
 
 ### Swift Package Manager
 
