@@ -114,25 +114,25 @@ public struct FormatMetadata: Codable, Identifiable, DictionaryKeyValueable {
         public var description: String {
             switch self {
             case .fileName:
-                return NSLocalizedString("File name", comment: "Metadata key")
+                return String(localized: "File name", bundle: .module, comment: "Metadata key")
             case .numberStreams:
-                return NSLocalizedString("Number streams", comment: "Metadata key")
+                return String(localized: "Number streams", bundle: .module, comment: "Metadata key")
             case .formatName:
-                return NSLocalizedString("Format name", comment: "Metadata key")
+                return String(localized: "Format name", bundle: .module, comment: "Metadata key")
             case .startTime:
-                return NSLocalizedString("Start time", comment: "Metadata key")
+                return String(localized: "Start time", bundle: .module, comment: "Metadata key")
             case .duration:
-                return NSLocalizedString("Duration", comment: "Metadata key")
+                return String(localized: "Duration", bundle: .module, comment: "Metadata key")
             case .size:
-                return NSLocalizedString("File size", comment: "Metadata key")
+                return String(localized: "File size", bundle: .module, comment: "Metadata key")
             case .bitRate:
-                return NSLocalizedString("Bit rate", comment: "Metadata key")
+                return String(localized: "Bit rate", bundle: .module, comment: "Metadata key")
             case .probeScore:
-                return NSLocalizedString("Probe score", comment: "Metadata key")
+                return String(localized: "Probe score", bundle: .module, comment: "Metadata key")
             case .tags:
-                return NSLocalizedString("Tags", comment: "Metadata key")
+                return String(localized: "Tags", bundle: .module, comment: "Metadata key")
             case .formatLongName:
-                return NSLocalizedString("Format long name", comment: "Metadata key")
+                return String(localized: "Format long name", bundle: .module, comment: "Metadata key")
             }
         }
     }
@@ -218,11 +218,11 @@ extension FormatMetadata {
             public var description: String {
                 switch self {
                 case .title:
-                    return NSLocalizedString("Title", comment: "Metadata key")
+                    return String(localized: "Title", bundle: .module, comment: "Metadata key")
                 case .encoder:
-                    return NSLocalizedString("Encoder", comment: "Metadata key")
+                    return String(localized: "Encoder", bundle: .module, comment: "Metadata key")
                 case .creationTime:
-                    return NSLocalizedString("Creation time", comment: "Metadata key")
+                    return String(localized: "Creation time", bundle: .module, comment: "Metadata key")
                 }
             }
         }
