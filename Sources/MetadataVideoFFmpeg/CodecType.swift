@@ -29,13 +29,13 @@ public enum CodecType: String, Codable, CustomStringConvertible {
     public var string: String {
         switch self {
         case .video:
-            return NSLocalizedString("Video", comment: "Title")
+            return String(localized: "Video", bundle: .module, comment: "Title")
         case .audio:
-            return NSLocalizedString("Audio", comment: "Title")
+            return String(localized: "Audio", bundle: .module, comment: "Title")
         case .data:
-            return NSLocalizedString("Data", comment: "Title")
+            return String(localized: "Data", bundle: .module, comment: "Title")
         case .subtitle:
-            return NSLocalizedString("Subtitle", comment: "Title")
+            return String(localized: "Subtitle", bundle: .module, comment: "Title")
         }
     }
 }

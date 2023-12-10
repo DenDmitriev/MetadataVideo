@@ -142,17 +142,17 @@ extension FileSize {
         public var designation: String {
             switch self {
             case .bit:
-                return NSLocalizedString("bit", comment: "FileSize")
+                return String(localized: "bit", bundle: .module, comment: "FileSize")
             case .byte:
-                return NSLocalizedString("B", comment: "FileSize")
+                return String(localized: "B", bundle: .module, comment: "FileSize")
             case .kiloByte:
-                return NSLocalizedString("KB", comment: "FileSize")
+                return String(localized: "KB", bundle: .module, comment: "FileSize")
             case .megaByte:
-                return NSLocalizedString("MB", comment: "FileSize")
+                return String(localized: "MB", bundle: .module, comment: "FileSize")
             case .gigaByte:
-                return NSLocalizedString("GB", comment: "FileSize")
+                return String(localized: "GB", bundle: .module, comment: "FileSize")
             case .teraByte:
-                return NSLocalizedString("TB", comment: "FileSize")
+                return String(localized: "TB", bundle: .module, comment: "FileSize")
             }
         }
     }

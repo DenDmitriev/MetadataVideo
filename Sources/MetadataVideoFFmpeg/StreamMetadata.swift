@@ -163,55 +163,55 @@ public struct StreamMetadata: Codable, Identifiable, DictionaryKeyValueable {
         public var description: String {
             switch self {
             case .index:
-                return NSLocalizedString("Index", comment: "Metadata key")
+                return String(localized: "Index", bundle: .module, comment: "Metadata key")
             case .codecName:
-                return NSLocalizedString("Codec name", comment: "Metadata key")
+                return String(localized: "Codec name", bundle: .module, comment: "Metadata key")
             case .codecLongName:
-                return NSLocalizedString("Codec long name", comment: "Metadata key")
+                return String(localized: "Codec long name", bundle: .module, comment: "Metadata key")
             case .profile:
-                return NSLocalizedString("Profile", comment: "Metadata key")
+                return String(localized: "Profile", bundle: .module, comment: "Metadata key")
             case .codecType:
-                return NSLocalizedString("Codec type", comment: "Metadata key")
+                return String(localized: "Codec type", bundle: .module, comment: "Metadata key")
             case .width:
-                return NSLocalizedString("Width", comment: "Metadata key")
+                return String(localized: "Width", bundle: .module, comment: "Metadata key")
             case .height:
-                return NSLocalizedString("Height", comment: "Metadata key")
+                return String(localized: "Height", bundle: .module, comment: "Metadata key")
             case .displayAspectRatio:
-                return NSLocalizedString("Aspect ratio", comment: "Metadata key")
+                return String(localized: "Aspect ratio", bundle: .module, comment: "Metadata key")
             case .pixelFormat:
-                return NSLocalizedString("Pixel format", comment: "Metadata key")
+                return String(localized: "Pixel format", bundle: .module, comment: "Metadata key")
             case .frameRate:
-                return NSLocalizedString("Frame rate", comment: "Metadata key")
+                return String(localized: "Frame rate", bundle: .module, comment: "Metadata key")
             case .tags:
-                return NSLocalizedString("Tags", comment: "Metadata key")
+                return String(localized: "Tags", bundle: .module, comment: "Metadata key")
             case .codecTagString:
-                return NSLocalizedString("Codec Tag String", comment: "Metadata key")
+                return String(localized: "Codec Tag String", bundle: .module, comment: "Metadata key")
             case .colorRange:
-                return NSLocalizedString("Color range", comment: "Metadata key")
+                return String(localized: "Color range", bundle: .module, comment: "Metadata key")
             case .colorSpace:
-                return NSLocalizedString("Color space", comment: "Metadata key")
+                return String(localized: "Color space", bundle: .module, comment: "Metadata key")
             case .startTime:
-                return NSLocalizedString("Start time", comment: "Metadata key")
+                return String(localized: "Start time", bundle: .module, comment: "Metadata key")
             case .duration:
-                return NSLocalizedString("Duration", comment: "Metadata key")
+                return String(localized: "Duration", bundle: .module, comment: "Metadata key")
             case .bitRate:
-                return NSLocalizedString("Bit rate", comment: "Metadata key")
+                return String(localized: "Bit rate", bundle: .module, comment: "Metadata key")
             case .bitsPerRawSample:
-                return NSLocalizedString("Bits Per Raw Sample", comment: "Metadata key")
+                return String(localized: "Bits Per Raw Sample", bundle: .module, comment: "Metadata key")
             case .numberFrames:
-                return NSLocalizedString("Number of frames", comment: "Metadata key")
+                return String(localized: "Number of frames", bundle: .module, comment: "Metadata key")
             case .fieldOrder:
-                return NSLocalizedString("Field order", comment: "Metadata key")
+                return String(localized: "Field order", bundle: .module, comment: "Metadata key")
             case .sampleRate:
-                return NSLocalizedString("Sample rate", comment: "Metadata key")
+                return String(localized: "Sample rate", bundle: .module, comment: "Metadata key")
             case .channels:
-                return NSLocalizedString("Channels", comment: "Metadata key")
+                return String(localized: "Channels", bundle: .module, comment: "Metadata key")
             case .channelLayout:
-                return NSLocalizedString("Channel layout", comment: "Metadata key")
+                return String(localized: "Channel layout", bundle: .module, comment: "Metadata key")
             case .bitsPerSample:
-                return NSLocalizedString("Bits per sample", comment: "Metadata key")
+                return String(localized: "Bits per sample", bundle: .module, comment: "Metadata key")
             case .timeBase:
-                return NSLocalizedString("Time base", comment: "Metadata key")
+                return String(localized: "Time base", bundle: .module, comment: "Metadata key")
             }
         }
     }
@@ -357,25 +357,25 @@ extension StreamMetadata {
             public var description: String {
                 switch self {
                 case .title:
-                    return NSLocalizedString("Title", comment: "Metadata key")
+                    return String(localized: "Title", bundle: .module, comment: "Metadata key")
                 case .language:
-                    return NSLocalizedString("Language", comment: "Metadata key")
+                    return String(localized: "Language", bundle: .module, comment: "Metadata key")
                 case .duration:
-                    return NSLocalizedString("Duration", comment: "Metadata key")
+                    return String(localized: "Duration", bundle: .module, comment: "Metadata key")
                 case .numberOfFrames:
-                    return NSLocalizedString("Number of frames", comment: "Metadata key")
+                    return String(localized: "Number of frames", bundle: .module, comment: "Metadata key")
                 case .numberOfBytes:
-                    return NSLocalizedString("Size", comment: "Metadata key")
+                    return String(localized: "Size", bundle: .module, comment: "Metadata key")
                 case .creationTime:
-                    return NSLocalizedString("Creation time", comment: "Metadata key")
+                    return String(localized: "Creation time", bundle: .module, comment: "Metadata key")
                 case .handlerName:
-                    return NSLocalizedString("Handler name", comment: "Metadata key")
+                    return String(localized: "Handler name", bundle: .module, comment: "Metadata key")
                 case .vendorId:
-                    return NSLocalizedString("Vendor ID", comment: "Metadata key")
+                    return String(localized: "Vendor ID", bundle: .module, comment: "Metadata key")
                 case .encoder:
-                    return NSLocalizedString("Encoder", comment: "Metadata key")
+                    return String(localized: "Encoder", bundle: .module, comment: "Metadata key")
                 case .timecode:
-                    return NSLocalizedString("Timecode", comment: "Metadata key")
+                    return String(localized: "Timecode", bundle: .module, comment: "Metadata key")
                 }
             }
         }

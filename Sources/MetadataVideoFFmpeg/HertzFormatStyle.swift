@@ -9,7 +9,7 @@ import Foundation
 
 public struct HertzFormatStyle: FormatStyle {
     public func format(_ value: Int) -> String {
-        return value.formatted() + " " + NSLocalizedString("Hz", comment: "FormatStyle")
+        return value.formatted() + " " + String(localized: "Hz", bundle: .module, comment: "FormatStyle")
     }
 }
 
