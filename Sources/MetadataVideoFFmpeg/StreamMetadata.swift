@@ -163,55 +163,55 @@ public struct StreamMetadata: Codable, Identifiable, DictionaryKeyValueable {
         public var description: String {
             switch self {
             case .index:
-                return "Index"
+                return String(localized: "Index", bundle: .module, comment: "Metadata key")
             case .codecName:
-                return "Codec name"
+                return String(localized: "Codec name", bundle: .module, comment: "Metadata key")
             case .codecLongName:
-                return "Codec long name"
+                return String(localized: "Codec long name", bundle: .module, comment: "Metadata key")
             case .profile:
-                return "Profile"
+                return String(localized: "Profile", bundle: .module, comment: "Metadata key")
             case .codecType:
-                return "Codec type"
+                return String(localized: "Codec type", bundle: .module, comment: "Metadata key")
             case .width:
-                return "Width"
+                return String(localized: "Width", bundle: .module, comment: "Metadata key")
             case .height:
-                return "Height"
+                return String(localized: "Height", bundle: .module, comment: "Metadata key")
             case .displayAspectRatio:
-                return "Aspect ratio"
+                return String(localized: "Aspect ratio", bundle: .module, comment: "Metadata key")
             case .pixelFormat:
-                return "Pixel format"
+                return String(localized: "Pixel format", bundle: .module, comment: "Metadata key")
             case .frameRate:
-                return "Frame rate"
+                return String(localized: "Frame rate", bundle: .module, comment: "Metadata key")
             case .tags:
-                return "Tags"
+                return String(localized: "Tags", bundle: .module, comment: "Metadata key")
             case .codecTagString:
-                return "Codec Tag String"
+                return String(localized: "Codec Tag String", bundle: .module, comment: "Metadata key")
             case .colorRange:
-                return "Color range"
+                return String(localized: "Color range", bundle: .module, comment: "Metadata key")
             case .colorSpace:
-                return "Color space"
+                return String(localized: "Color space", bundle: .module, comment: "Metadata key")
             case .startTime:
-                return "Start time"
+                return String(localized: "Start time", bundle: .module, comment: "Metadata key")
             case .duration:
-                return "Duration"
+                return String(localized: "Duration", bundle: .module, comment: "Metadata key")
             case .bitRate:
-                return "Bit rate"
+                return String(localized: "Bit rate", bundle: .module, comment: "Metadata key")
             case .bitsPerRawSample:
-                return "Bits Per Raw Sample"
+                return String(localized: "Bits Per Raw Sample", bundle: .module, comment: "Metadata key")
             case .numberFrames:
-                return "Number frames"
+                return String(localized: "Number of frames", bundle: .module, comment: "Metadata key")
             case .fieldOrder:
-                return "Field order"
+                return String(localized: "Field order", bundle: .module, comment: "Metadata key")
             case .sampleRate:
-                return "Sample rate"
+                return String(localized: "Sample rate", bundle: .module, comment: "Metadata key")
             case .channels:
-                return "Channels"
+                return String(localized: "Channels", bundle: .module, comment: "Metadata key")
             case .channelLayout:
-                return "Channel layout"
+                return String(localized: "Channel layout", bundle: .module, comment: "Metadata key")
             case .bitsPerSample:
-                return "Bits per sample"
+                return String(localized: "Bits per sample", bundle: .module, comment: "Metadata key")
             case .timeBase:
-                return "Time base"
+                return String(localized: "Time base", bundle: .module, comment: "Metadata key")
             }
         }
     }
@@ -357,25 +357,25 @@ extension StreamMetadata {
             public var description: String {
                 switch self {
                 case .title:
-                    return "Title"
+                    return String(localized: "Title", bundle: .module, comment: "Metadata key")
                 case .language:
-                    return "Language"
+                    return String(localized: "Language", bundle: .module, comment: "Metadata key")
                 case .duration:
-                    return "Duration"
+                    return String(localized: "Duration", bundle: .module, comment: "Metadata key")
                 case .numberOfFrames:
-                    return "Number of frames"
+                    return String(localized: "Number of frames", bundle: .module, comment: "Metadata key")
                 case .numberOfBytes:
-                    return "Size"
+                    return String(localized: "Size", bundle: .module, comment: "Metadata key")
                 case .creationTime:
-                    return "Creation time"
+                    return String(localized: "Creation time", bundle: .module, comment: "Metadata key")
                 case .handlerName:
-                    return "Handler name"
+                    return String(localized: "Handler name", bundle: .module, comment: "Metadata key")
                 case .vendorId:
-                    return "Vendor ID"
+                    return String(localized: "Vendor ID", bundle: .module, comment: "Metadata key")
                 case .encoder:
-                    return "Encoder"
+                    return String(localized: "Encoder", bundle: .module, comment: "Metadata key")
                 case .timecode:
-                    return "Timecode"
+                    return String(localized: "Timecode", bundle: .module, comment: "Metadata key")
                 }
             }
         }

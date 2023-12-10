@@ -139,21 +139,20 @@ extension FileSize {
         }
         
         /// Symbolic designation of the dimension factor.
-        /// > Warning: Symbolic designation not localized.
         public var designation: String {
             switch self {
             case .bit:
-                return "bit"
+                return String(localized: "bit", bundle: .module, comment: "FileSize")
             case .byte:
-                return "B"
+                return String(localized: "B", bundle: .module, comment: "FileSize")
             case .kiloByte:
-                return "KB"
+                return String(localized: "KB", bundle: .module, comment: "FileSize")
             case .megaByte:
-                return "MB"
+                return String(localized: "MB", bundle: .module, comment: "FileSize")
             case .gigaByte:
-                return "GB"
+                return String(localized: "GB", bundle: .module, comment: "FileSize")
             case .teraByte:
-                return "TB"
+                return String(localized: "TB", bundle: .module, comment: "FileSize")
             }
         }
     }
@@ -163,7 +162,8 @@ extension FileSize: CustomStringConvertible {
     
     /// File size description with dimension symbol
     public var description: String {
-        return Int(size.rounded()).formatted() + " " + self.unit.designation
+        let rounded = (size * 100).rounded() / 100
+        return rounded.formatted() + " " + self.unit.designation
     }
     
     /// File size description with dimension symbol

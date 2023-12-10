@@ -62,7 +62,6 @@ public struct FormatMetadata: Codable, Identifiable, DictionaryKeyValueable {
     ///     let metadata = try JSONDecoder().decode(MetadataVideo.self, from: data)
     ///     let fileName = metadata.format.value(for: .fileName) // "Video.mov"
     ///
-    /// > Warning: The return value is not localized.
     ///
     /// - Parameter key: `String, CodingKey, CaseIterable, Keyable`.
     ///
@@ -84,7 +83,7 @@ public struct FormatMetadata: Codable, Identifiable, DictionaryKeyValueable {
         case .bitRate:
             return MetadataVideo.fileSizeFormatted(value: bitRate, unit: .bit, rule: .down)
         case .probeScore:
-            return probeScore?.formatted()
+            return (probeScore ?? .zero).formatted() + "%"
         case .tags:
             return nil
         case .formatLongName:
@@ -115,25 +114,25 @@ public struct FormatMetadata: Codable, Identifiable, DictionaryKeyValueable {
         public var description: String {
             switch self {
             case .fileName:
-                return "File name"
+                return String(localized: "File name", bundle: .module, comment: "Metadata key")
             case .numberStreams:
-                return "Number streams"
+                return String(localized: "Number streams", bundle: .module, comment: "Metadata key")
             case .formatName:
-                return "Format name"
+                return String(localized: "Format name", bundle: .module, comment: "Metadata key")
             case .startTime:
-                return "Start time"
+                return String(localized: "Start time", bundle: .module, comment: "Metadata key")
             case .duration:
-                return "Duration"
+                return String(localized: "Duration", bundle: .module, comment: "Metadata key")
             case .size:
-                return "File size"
+                return String(localized: "File size", bundle: .module, comment: "Metadata key")
             case .bitRate:
-                return "Bit rate"
+                return String(localized: "Bit rate", bundle: .module, comment: "Metadata key")
             case .probeScore:
-                return "Probe score"
+                return String(localized: "Probe score", bundle: .module, comment: "Metadata key")
             case .tags:
-                return "Tags"
+                return String(localized: "Tags", bundle: .module, comment: "Metadata key")
             case .formatLongName:
-                return "Format long name"
+                return String(localized: "Format long name", bundle: .module, comment: "Metadata key")
             }
         }
     }
@@ -219,11 +218,11 @@ extension FormatMetadata {
             public var description: String {
                 switch self {
                 case .title:
-                    return "Title"
+                    return String(localized: "Title", bundle: .module, comment: "Metadata key")
                 case .encoder:
-                    return "Encoder"
+                    return String(localized: "Encoder", bundle: .module, comment: "Metadata key")
                 case .creationTime:
-                    return "Creation time"
+                    return String(localized: "Creation time", bundle: .module, comment: "Metadata key")
                 }
             }
         }
