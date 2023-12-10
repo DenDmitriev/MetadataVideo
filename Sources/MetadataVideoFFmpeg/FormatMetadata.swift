@@ -62,7 +62,6 @@ public struct FormatMetadata: Codable, Identifiable, DictionaryKeyValueable {
     ///     let metadata = try JSONDecoder().decode(MetadataVideo.self, from: data)
     ///     let fileName = metadata.format.value(for: .fileName) // "Video.mov"
     ///
-    /// > Warning: The return value is not localized.
     ///
     /// - Parameter key: `String, CodingKey, CaseIterable, Keyable`.
     ///
@@ -84,7 +83,7 @@ public struct FormatMetadata: Codable, Identifiable, DictionaryKeyValueable {
         case .bitRate:
             return MetadataVideo.fileSizeFormatted(value: bitRate, unit: .bit, rule: .down)
         case .probeScore:
-            return probeScore?.formatted()
+            return (probeScore ?? .zero).formatted() + "%"
         case .tags:
             return nil
         case .formatLongName:
@@ -115,25 +114,25 @@ public struct FormatMetadata: Codable, Identifiable, DictionaryKeyValueable {
         public var description: String {
             switch self {
             case .fileName:
-                return "File name"
+                return NSLocalizedString("File name", comment: "Metadata key")
             case .numberStreams:
-                return "Number streams"
+                return NSLocalizedString("Number streams", comment: "Metadata key")
             case .formatName:
-                return "Format name"
+                return NSLocalizedString("Format name", comment: "Metadata key")
             case .startTime:
-                return "Start time"
+                return NSLocalizedString("Start time", comment: "Metadata key")
             case .duration:
-                return "Duration"
+                return NSLocalizedString("Duration", comment: "Metadata key")
             case .size:
-                return "File size"
+                return NSLocalizedString("File size", comment: "Metadata key")
             case .bitRate:
-                return "Bit rate"
+                return NSLocalizedString("Bit rate", comment: "Metadata key")
             case .probeScore:
-                return "Probe score"
+                return NSLocalizedString("Probe score", comment: "Metadata key")
             case .tags:
-                return "Tags"
+                return NSLocalizedString("Tags", comment: "Metadata key")
             case .formatLongName:
-                return "Format long name"
+                return NSLocalizedString("Format long name", comment: "Metadata key")
             }
         }
     }
@@ -219,11 +218,11 @@ extension FormatMetadata {
             public var description: String {
                 switch self {
                 case .title:
-                    return "Title"
+                    return NSLocalizedString("Title", comment: "Metadata key")
                 case .encoder:
-                    return "Encoder"
+                    return NSLocalizedString("Encoder", comment: "Metadata key")
                 case .creationTime:
-                    return "Creation time"
+                    return NSLocalizedString("Creation time", comment: "Metadata key")
                 }
             }
         }

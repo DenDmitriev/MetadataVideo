@@ -139,21 +139,20 @@ extension FileSize {
         }
         
         /// Symbolic designation of the dimension factor.
-        /// > Warning: Symbolic designation not localized.
         public var designation: String {
             switch self {
             case .bit:
-                return "bit"
+                return NSLocalizedString("bit", comment: "FileSize")
             case .byte:
-                return "B"
+                return NSLocalizedString("B", comment: "FileSize")
             case .kiloByte:
-                return "KB"
+                return NSLocalizedString("KB", comment: "FileSize")
             case .megaByte:
-                return "MB"
+                return NSLocalizedString("MB", comment: "FileSize")
             case .gigaByte:
-                return "GB"
+                return NSLocalizedString("GB", comment: "FileSize")
             case .teraByte:
-                return "TB"
+                return NSLocalizedString("TB", comment: "FileSize")
             }
         }
     }
@@ -163,7 +162,8 @@ extension FileSize: CustomStringConvertible {
     
     /// File size description with dimension symbol
     public var description: String {
-        return Int(size.rounded()).formatted() + " " + self.unit.designation
+        let rounded = (size * 100).rounded() / 100
+        return rounded.formatted() + " " + self.unit.designation
     }
     
     /// File size description with dimension symbol

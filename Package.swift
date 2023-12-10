@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "MetadataVideoFFmpeg",
+    defaultLocalization: "en",
     platforms: [
         .macOS(.v13),
         .iOS(.v12),

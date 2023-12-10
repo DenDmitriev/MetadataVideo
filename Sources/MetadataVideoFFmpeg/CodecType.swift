@@ -23,6 +23,19 @@ public enum CodecType: String, Codable, CustomStringConvertible {
     
     /// Name of codec type
     public var description: String {
-        self.rawValue.capitalized(with: Locale.current)
+        string
+    }
+    
+    public var string: String {
+        switch self {
+        case .video:
+            return NSLocalizedString("Video", comment: "Title")
+        case .audio:
+            return NSLocalizedString("Audio", comment: "Title")
+        case .data:
+            return NSLocalizedString("Data", comment: "Title")
+        case .subtitle:
+            return NSLocalizedString("Subtitle", comment: "Title")
+        }
     }
 }

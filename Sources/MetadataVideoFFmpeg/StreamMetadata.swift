@@ -163,55 +163,55 @@ public struct StreamMetadata: Codable, Identifiable, DictionaryKeyValueable {
         public var description: String {
             switch self {
             case .index:
-                return "Index"
+                return NSLocalizedString("Index", comment: "Metadata key")
             case .codecName:
-                return "Codec name"
+                return NSLocalizedString("Codec name", comment: "Metadata key")
             case .codecLongName:
-                return "Codec long name"
+                return NSLocalizedString("Codec long name", comment: "Metadata key")
             case .profile:
-                return "Profile"
+                return NSLocalizedString("Profile", comment: "Metadata key")
             case .codecType:
-                return "Codec type"
+                return NSLocalizedString("Codec type", comment: "Metadata key")
             case .width:
-                return "Width"
+                return NSLocalizedString("Width", comment: "Metadata key")
             case .height:
-                return "Height"
+                return NSLocalizedString("Height", comment: "Metadata key")
             case .displayAspectRatio:
-                return "Aspect ratio"
+                return NSLocalizedString("Aspect ratio", comment: "Metadata key")
             case .pixelFormat:
-                return "Pixel format"
+                return NSLocalizedString("Pixel format", comment: "Metadata key")
             case .frameRate:
-                return "Frame rate"
+                return NSLocalizedString("Frame rate", comment: "Metadata key")
             case .tags:
-                return "Tags"
+                return NSLocalizedString("Tags", comment: "Metadata key")
             case .codecTagString:
-                return "Codec Tag String"
+                return NSLocalizedString("Codec Tag String", comment: "Metadata key")
             case .colorRange:
-                return "Color range"
+                return NSLocalizedString("Color range", comment: "Metadata key")
             case .colorSpace:
-                return "Color space"
+                return NSLocalizedString("Color space", comment: "Metadata key")
             case .startTime:
-                return "Start time"
+                return NSLocalizedString("Start time", comment: "Metadata key")
             case .duration:
-                return "Duration"
+                return NSLocalizedString("Duration", comment: "Metadata key")
             case .bitRate:
-                return "Bit rate"
+                return NSLocalizedString("Bit rate", comment: "Metadata key")
             case .bitsPerRawSample:
-                return "Bits Per Raw Sample"
+                return NSLocalizedString("Bits Per Raw Sample", comment: "Metadata key")
             case .numberFrames:
-                return "Number frames"
+                return NSLocalizedString("Number of frames", comment: "Metadata key")
             case .fieldOrder:
-                return "Field order"
+                return NSLocalizedString("Field order", comment: "Metadata key")
             case .sampleRate:
-                return "Sample rate"
+                return NSLocalizedString("Sample rate", comment: "Metadata key")
             case .channels:
-                return "Channels"
+                return NSLocalizedString("Channels", comment: "Metadata key")
             case .channelLayout:
-                return "Channel layout"
+                return NSLocalizedString("Channel layout", comment: "Metadata key")
             case .bitsPerSample:
-                return "Bits per sample"
+                return NSLocalizedString("Bits per sample", comment: "Metadata key")
             case .timeBase:
-                return "Time base"
+                return NSLocalizedString("Time base", comment: "Metadata key")
             }
         }
     }
@@ -357,25 +357,25 @@ extension StreamMetadata {
             public var description: String {
                 switch self {
                 case .title:
-                    return "Title"
+                    return NSLocalizedString("Title", comment: "Metadata key")
                 case .language:
-                    return "Language"
+                    return NSLocalizedString("Language", comment: "Metadata key")
                 case .duration:
-                    return "Duration"
+                    return NSLocalizedString("Duration", comment: "Metadata key")
                 case .numberOfFrames:
-                    return "Number of frames"
+                    return NSLocalizedString("Number of frames", comment: "Metadata key")
                 case .numberOfBytes:
-                    return "Size"
+                    return NSLocalizedString("Size", comment: "Metadata key")
                 case .creationTime:
-                    return "Creation time"
+                    return NSLocalizedString("Creation time", comment: "Metadata key")
                 case .handlerName:
-                    return "Handler name"
+                    return NSLocalizedString("Handler name", comment: "Metadata key")
                 case .vendorId:
-                    return "Vendor ID"
+                    return NSLocalizedString("Vendor ID", comment: "Metadata key")
                 case .encoder:
-                    return "Encoder"
+                    return NSLocalizedString("Encoder", comment: "Metadata key")
                 case .timecode:
-                    return "Timecode"
+                    return NSLocalizedString("Timecode", comment: "Metadata key")
                 }
             }
         }

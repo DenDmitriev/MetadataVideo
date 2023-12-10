@@ -1,0 +1,556 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Aspect ratio" : {
+      "comment" : "Metadata key",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Соотношение сторон"
+          }
+        }
+      }
+    },
+    "Audio" : {
+      "comment" : "Title",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Аудио"
+          }
+        }
+      }
+    },
+    "B" : {
+      "comment" : "FileSize",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "В"
+          }
+        }
+      }
+    },
+    "bit" : {
+      "comment" : "FileSize",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "бит"
+          }
+        }
+      }
+    },
+    "Bit rate" : {
+      "comment" : "Metadata key",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Битрейт"
+          }
+        }
+      }
+    },
+    "Bits Per Raw Sample" : {
+      "comment" : "Metadata key",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Бит на образец"
+          }
+        }
+      }
+    },
+    "Bits per sample" : {
+      "comment" : "Metadata key",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Бит на канал"
+          }
+        }
+      }
+    },
+    "Channel layout" : {
+      "comment" : "Metadata key",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Режим канала"
+          }
+        }
+      }
+    },
+    "Channels" : {
+      "comment" : "Metadata key",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Каналы"
+          }
+        }
+      }
+    },
+    "Codec long name" : {
+      "comment" : "Metadata key",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Полное имя кодека"
+          }
+        }
+      }
+    },
+    "Codec name" : {
+      "comment" : "Metadata key",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Название кодека"
+          }
+        }
+      }
+    },
+    "Codec Tag String" : {
+      "comment" : "Metadata key",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Строка тегов кодека"
+          }
+        }
+      }
+    },
+    "Codec type" : {
+      "comment" : "Metadata key",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Тип кодека"
+          }
+        }
+      }
+    },
+    "Color range" : {
+      "comment" : "Metadata key",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Цветовой диапазон"
+          }
+        }
+      }
+    },
+    "Color space" : {
+      "comment" : "Metadata key",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Цветове пространство"
+          }
+        }
+      }
+    },
+    "Creation time" : {
+      "comment" : "Metadata key",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Дата создания"
+          }
+        }
+      }
+    },
+    "Data" : {
+      "comment" : "Title",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Данные"
+          }
+        }
+      }
+    },
+    "Duration" : {
+      "comment" : "Metadata key",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Длительность"
+          }
+        }
+      }
+    },
+    "Encoder" : {
+      "comment" : "Metadata key",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Кодировщик"
+          }
+        }
+      }
+    },
+    "Field order" : {
+      "comment" : "Metadata key",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Метод развёртки"
+          }
+        }
+      }
+    },
+    "File name" : {
+      "comment" : "Metadata key",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Название файла"
+          }
+        }
+      }
+    },
+    "File size" : {
+      "comment" : "Metadata key",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Размер файла"
+          }
+        }
+      }
+    },
+    "Format long name" : {
+      "comment" : "Metadata key",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Полное название формата"
+          }
+        }
+      }
+    },
+    "Format name" : {
+      "comment" : "Metadata key",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Название формата"
+          }
+        }
+      }
+    },
+    "Frame rate" : {
+      "comment" : "Metadata key",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Частота кадров"
+          }
+        }
+      }
+    },
+    "GB" : {
+      "comment" : "FileSize",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ГБ"
+          }
+        }
+      }
+    },
+    "Handler name" : {
+      "comment" : "Metadata key",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Имя обработчика"
+          }
+        }
+      }
+    },
+    "Height" : {
+      "comment" : "Metadata key",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Высота"
+          }
+        }
+      }
+    },
+    "Hz" : {
+      "comment" : "FormatStyle",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Гц"
+          }
+        }
+      }
+    },
+    "Index" : {
+      "comment" : "Metadata key",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Индекс"
+          }
+        }
+      }
+    },
+    "KB" : {
+      "comment" : "FileSize",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "КБ"
+          }
+        }
+      }
+    },
+    "Language" : {
+      "comment" : "Metadata key",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Язык"
+          }
+        }
+      }
+    },
+    "MB" : {
+      "comment" : "FileSize",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "МБ"
+          }
+        }
+      }
+    },
+    "Number of frames" : {
+      "comment" : "Metadata key",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Число кадров"
+          }
+        }
+      }
+    },
+    "Number streams" : {
+      "comment" : "Metadata key",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Количество потоков"
+          }
+        }
+      }
+    },
+    "Pixel format" : {
+      "comment" : "Metadata key",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Формат пикселя"
+          }
+        }
+      }
+    },
+    "Probe score" : {
+      "comment" : "Metadata key",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Оценка пробы анализа"
+          }
+        }
+      }
+    },
+    "Profile" : {
+      "comment" : "Metadata key",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Профиль"
+          }
+        }
+      }
+    },
+    "Sample rate" : {
+      "comment" : "Metadata key",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Частота дискретизации"
+          }
+        }
+      }
+    },
+    "Size" : {
+      "comment" : "Metadata key",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Размер"
+          }
+        }
+      }
+    },
+    "Start time" : {
+      "comment" : "Metadata key",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Начальное время"
+          }
+        }
+      }
+    },
+    "Subtitle" : {
+      "comment" : "Title",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Субтитры"
+          }
+        }
+      }
+    },
+    "Tags" : {
+      "comment" : "Metadata key",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Теги"
+          }
+        }
+      }
+    },
+    "TB" : {
+      "comment" : "FileSize",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ТБ"
+          }
+        }
+      }
+    },
+    "Time base" : {
+      "comment" : "Metadata key",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Временная метка презентации"
+          }
+        }
+      }
+    },
+    "Timecode" : {
+      "comment" : "Metadata key",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Таймкод"
+          }
+        }
+      }
+    },
+    "Title" : {
+      "comment" : "Metadata key",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Название"
+          }
+        }
+      }
+    },
+    "Vendor ID" : {
+      "comment" : "Metadata key",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Идентификатор поставщика"
+          }
+        }
+      }
+    },
+    "Video" : {
+      "comment" : "Title",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Видео"
+          }
+        }
+      }
+    },
+    "Width" : {
+      "comment" : "Metadata key",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Длина"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
