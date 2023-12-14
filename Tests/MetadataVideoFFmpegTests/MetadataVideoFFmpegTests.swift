@@ -12,7 +12,7 @@ final class MetadataVideoTests: XCTestCase {
             let metadata = try JSONDecoder().decode(MetadataVideo.self, from: data)
             
             let numberStreamsExpectation = 3
-            let durationExpectation: Duration = .init(secondsComponent: 5, attosecondsComponent: 0)
+            let durationExpectation: Duration = .seconds(5)
             let fileSizeExpectation = 990502 // bytes
             let bitRateExpectation = 1584803 // bytes
             
