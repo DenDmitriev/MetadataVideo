@@ -47,19 +47,6 @@ extension MetadataVideo {
         return formatter
     }()
     
-    static func duration(seconds: Double) -> Duration? {
-        let array = String(seconds).components(separatedBy: ".")
-        guard 1...2 ~= array.count else { return nil }
-        
-        let secondsString = array.first ?? "0"
-        let attosecondsString = array.last ?? "0"
-        let seconds = Int64(secondsString) ?? 0
-        let attoseconds = Int64(attosecondsString) ?? 0
-        
-        let duration = Duration(secondsComponent: seconds, attosecondsComponent: attoseconds)
-        return duration
-    }
-    
     static func fileSize(value: Int, unit: FileSize.Unit) -> FileSize {
         let fileSize = FileSize(size: value, unit: unit)
         return fileSize
@@ -67,9 +54,8 @@ extension MetadataVideo {
     
     static func decodeIfPresentDuration<Key: CodingKey>(container: KeyedDecodingContainer<Key>, key: Key) throws -> Duration? {
         if let string = try container.decodeIfPresent(String.self, forKey: key),
-           let double = Double(string),
-           let duration = MetadataVideo.duration(seconds: double) {
-            return duration
+           let double = Double(string) {
+            return Duration.seconds(double)
         } else {
             return nil
         }
